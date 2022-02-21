@@ -23,7 +23,13 @@ document.addEventListener('DOMContentLoaded', () => {
     return data;
   }
 
-  function setData({ name, main, wind }) {
+  function setData({
+    name,
+    main: { temp },
+    wind: { speed },
+    main: { humidity },
+    main: { pressure },
+  }) {
     const $temp = document.querySelector('.box__temp'),
       $humidity = document.querySelector('.h-value'),
       $wind = document.querySelector('.w-value'),
@@ -35,10 +41,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     $city.textContent = name;
     $date.textContent = dateBuilder(currentDate);
-    $temp.innerHTML = `${Math.floor(main.temp - 275.15)} &#8451`;
-    $humidity.textContent = main.humidity + ` %`;
-    $wind.textContent = wind.speed + ' m/s';
-    $pressure.textContent = main.pressure + ' hPa';
+    $temp.innerHTML = `${Math.floor(temp - 275.15)} &#8451`;
+    $humidity.textContent = humidity + ` %`;
+    $wind.textContent = speed + ' m/s';
+    $pressure.textContent = pressure + ' hPa';
   }
 
   function dateBuilder(date) {
