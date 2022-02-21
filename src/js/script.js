@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   $input.addEventListener('keydown', (e) => {
     if (e.keyCode == 13) {
-      getData(e.target.value);
+      getData(e.target.value).then(setData);
       clearData.call($input);
     }
   });
@@ -20,10 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const data = await response.json();
     console.log(data);
 
-    setData(data);
+    return data;
   }
 
-  function setData(data) {
+  function setData({ name, main, wind }) {
     const $temp = document.querySelector('.box__temp'),
       $humidity = document.querySelector('.h-value'),
       $wind = document.querySelector('.w-value'),
@@ -33,12 +33,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let currentDate = new Date();
 
-    $city.textContent = data.name;
+    $city.textContent = name;
     $date.textContent = dateBuilder(currentDate);
-    $temp.innerHTML = `${Math.floor(data.main.temp - 275.15)} &#8451`;
-    $humidity.textContent = data.main.humidity + ` %`;
-    $wind.textContent = data.wind.speed + ' m/s';
-    $pressure.textContent = data.main.pressure + ' hPa';
+    $temp.innerHTML = `${Math.floor(main.temp - 275.15)} &#8451`;
+    $humidity.textContent = main.humidity + ` %`;
+    $wind.textContent = wind.speed + ' m/s';
+    $pressure.textContent = main.pressure + ' hPa';
   }
 
   function dateBuilder(date) {
