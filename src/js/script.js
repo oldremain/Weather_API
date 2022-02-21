@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function setData({
     name,
+    sys: { country },
     main: { temp },
     wind: { speed },
     main: { humidity },
@@ -39,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let currentDate = new Date();
 
-    $city.textContent = name;
+    $city.innerHTML = name + ` <span>${country}</span>`;
     $date.textContent = dateBuilder(currentDate);
     $temp.innerHTML = `${Math.floor(temp - 275.15)} &#8451`;
     $humidity.textContent = humidity + ` %`;

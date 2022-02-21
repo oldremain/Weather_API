@@ -40,6 +40,13 @@
   font-weight: 600;
   font-size: 20px;
   margin-bottom: 10px;
+  position: relative;
+  span {
+    position: absolute;
+    top: 0;
+    right: -20px;
+    font-size: 10px;
+  }
 }
 .box__temp {
   font-size: 70px;
