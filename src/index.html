@@ -22,23 +22,28 @@
       <div class="container">
         <div class="weather__content box">
           <div class="box__input">
-            <input type="text" placeholder="Enter the city..." />
+            <input
+              type="text"
+              placeholder="Enter the city..."
+              autocomplete="off"
+              id="input"
+            />
           </div>
-          <div class="box__city">Moscow</div>
-          <div class="box__date">21/02/2022</div>
-          <div class="box__temp">15C</div>
+          <div class="box__city">City</div>
+          <div class="box__date">Current Date</div>
+          <div class="box__temp">&#8451;</div>
           <div class="box__details details">
             <div class="details__item">
               <div class="humidity">Humidity</div>
-              <span class="value">90</span>
+              <span class="h-value">%</span>
             </div>
             <div class="details__item">
               <div class="wind">Wind</div>
-              <span class="value">90</span>
+              <span class="w-value">m/s</span>
             </div>
             <div class="details__item">
               <div class="pressure">Pressure</div>
-              <span class="value">90</span>
+              <span class="p-value">hPa</span>
             </div>
             <!-- <li class="details__item wind">Wind</li>
             <li class="details__item pressure">Pressure</li> -->

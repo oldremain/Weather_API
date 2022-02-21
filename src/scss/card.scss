@@ -3,7 +3,7 @@
 }
 .box {
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   min-height: 600px;
   margin: auto;
   display: flex;
@@ -41,8 +41,6 @@
   font-size: 20px;
   margin-bottom: 10px;
 }
-.box__date {
-}
 .box__temp {
   font-size: 70px;
   text-shadow: 2px 2px 2px white;
@@ -51,9 +49,6 @@
 .box__details {
   display: flex;
   width: 100%;
-}
-.box__details > *:not(:last-child) {
-  //   margin-right: 20px;
 }
 .details__item {
   flex: 0 1 33.3333%;
@@ -75,4 +70,12 @@
 }
 .details__item > *:not(:last-child) {
   margin-bottom: 10px;
+}
+@media (max-width: 430px) {
+  .box {
+    min-height: 400px;
+  }
+  .box__temp {
+    margin: 40px 0 40px;
+  }
 }
