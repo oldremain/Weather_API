@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oranienbaum&family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./scss/style.scss" />
+    <title>Weather</title>
+  </head>
+  <body>
+    <section class="weather">
+      <div class="container">
+        <div class="weather__content box">
+          <div class="box__input">
+            <input type="text" placeholder="Enter the city..." />
+          </div>
+          <div class="box__city">Moscow</div>
+          <div class="box__date">21/02/2022</div>
+          <div class="box__temp">15C</div>
+          <div class="box__details details">
+            <div class="details__item">
+              <div class="humidity">Humidity</div>
+              <span class="value">90</span>
+            </div>
+            <div class="details__item">
+              <div class="wind">Wind</div>
+              <span class="value">90</span>
+            </div>
+            <div class="details__item">
+              <div class="pressure">Pressure</div>
+              <span class="value">90</span>
+            </div>
+            <!-- <li class="details__item wind">Wind</li>
+            <li class="details__item pressure">Pressure</li> -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <script type="module" src="./js/script.js"></script>
+  </body>
+</html>

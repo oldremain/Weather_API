@@ -1,0 +1,25 @@
+{
+  "name": "parcel",
+  "version": "1.0.0",
+  "description": "",
+  "browserslist": "> 0.5%, last 4 versions, IE >=9",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "author": "oldremain",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.2.0",
+    "autoprefixer": "^10.4.2",
+    "parcel": "^2.2.0",
+    "sass": "^1.48.0"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {
+        "grid": "autoplace"
+      }
+    }
+  } 
+}
